@@ -1,0 +1,80 @@
+/* I heisted the format from Joni */
+/* https://github.com/joni22u/dotfiles/blob/main/.config/rofi/config.rasi */
+
+configuration {
+	modi: "drun,run";
+	font: "curie 10";
+	terminal: "alacritty";
+	lines: 10;
+	sidebar-mode: true;
+	display-drun: "Apps";
+	display-run: "Run";
+	display-emoji: "Emoji";
+}
+
+@theme "/dev/null"
+
+* {
+	bg: #ede0d4;
+	fg: #6c605a;
+	accent: #e76f51;
+	button: #e9c46a;
+  
+	background-color: @bg;
+  	text-color: @fg;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+window {
+	padding: 30px;
+	border-radius: 7px;
+}
+
+prompt, entry {
+	text-color: @fg;
+	padding: 10px;
+	border-radius: 7px;
+}
+
+listview {
+	columns: 2;
+	lines: 10;
+}
+
+entry {
+	margin: 0 0 10px 10px;
+}
+
+prompt {
+	background-color: @button;
+	text-color: @fg;
+	margin: 0 0 10px 0;
+	padding: 10px 30px 10px 30px;
+}
+
+element {
+	border-radius: 7px;
+	padding: 10px 30px;
+}
+
+element.selected {
+	background-color: @accent;
+	text-color: @bg;
+}
+
+button {
+	border-radius: 7px;
+	padding: 10px;
+	margin: 10px 50px 0 50px;
+	horizontal-align: 0.5;
+}
+
+button selected {
+	background-color: @button;
+	text-color: @fg;
+	padding: 10px;
+}
