@@ -1,0 +1,15 @@
+[general]
+mode = waves
+sensetivity = 100
+framerate = 60
+bar_spacing = 1
+bar_width = 3
+
+[color]
+background = default
+gradient = 10
+gradient_count = 4
+gradient_color_1 = '#577590'
+gradient_color_2 = '#277da1'
+gradient_color_3 = '#43aa8b'
+gradient_color_4 = '#90be6d'

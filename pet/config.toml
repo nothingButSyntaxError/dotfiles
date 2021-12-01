@@ -1,0 +1,28 @@
+[highlight]
+string = true
+number = true
+comments = true
+search = true
+character = true
+multiline_comment = true
+secondary_keywords = true
+primary_keywords = true
+
+[colors]
+number = [220, 163, 163]
+string = [0, 255, 123]
+search = [38, 139, 210]
+character = [108, 113, 196]
+comment = [133, 153, 0]
+primary_keywords = [203, 182, 255]
+secondary_keywords = [0, 255, 173]
+multiline_comment = [133, 153, 0]
+
+[bar]
+file_type = true
+file_name = true
+lines = true
+background_default = [129, 135, 220]
+background_dirty = [252, 122, 87]
+background_command = [78, 205, 196]
+foreground_color = [10, 10, 10]
