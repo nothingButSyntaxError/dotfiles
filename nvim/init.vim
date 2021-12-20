@@ -95,7 +95,7 @@ set signcolumn=yes
 
 " Themeing
 let g:material_style = 'oceanic'
-colorscheme gruvbox
+colorscheme uwu
 hi Pmenu guibg='#00010a' guifg=white                    " popup menu colors
 hi Comment gui=italic cterm=italic                      " italic comments
 hi Search guibg=#b16286 guifg=#ebdbb2 gui=NONE          " search string highlight color

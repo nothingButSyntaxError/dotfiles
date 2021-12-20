@@ -7,8 +7,8 @@ window:
 # Colors
 colors:
   primary:
-    foreground: "0xc1c1c1"
-    background: "0x1f2421"
+    foreground: "0xC8C8C8"
+    background: "0x131A1C"
     # 010101
   normal:
     black: "0x262626"
@@ -44,4 +44,4 @@ font:
 
   size: 10
 
-background_opacity: 0.90
+background_opacity: 1

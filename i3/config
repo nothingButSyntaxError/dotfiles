@@ -177,18 +177,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#set $bg-color	#ffffff
-#set $inactive-bg-color	#a5a58d
-#set $text-color #212121
-#set $inactive-text-color	#212121
-#set $myborder #ffffff
+set $bg-color	#ca6702
+set $inactive-bg-color	#a5a58d
+set $text-color #212121
+set $inactive-text-color	#212121
+set $myborder #ca6702
 
 # window colors
 #			border			background		text		indicator
-#client.focused		$myborder			$bg-color		$text-color	#00ff00
-#client.unfocused 	$inactive-bg-color	$inactive-bg-color	$text-color	#00ff00
-#client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused		$myborder			$bg-color		$text-color	#00ff00
+client.unfocused 	$inactive-bg-color	$inactive-bg-color	$text-color	#00ff00
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -367,3 +367,4 @@ exec_always dunst -config /home/parth/.config/dunst/dunstrc
 exec_always picom --config ~/.config/picom/picom.conf
 
 exec_always npx http-server ~/Documents/github/firefox-startpages/first-theme
+
