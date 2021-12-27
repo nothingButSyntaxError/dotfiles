@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -51,7 +51,8 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "#e63946" -bg "#e63946" -fg "$text-color" -hlbg "#e63946" -hlfg "#9575cd" -font "CaskaydiaCove Nerd Font 22"
+bindsym $mod+d exec rofi -show
+bindsym $mod+p exec /home/parth/.config/rofi/launchers/powermenu.bash
 
 # change focus
 bindsym $mod+j focus left
@@ -150,6 +151,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+for_window [class=".*"] border pixel 0
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -177,11 +180,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color	#ca6702
+set $bg-color#	EDEb7100
 set $inactive-bg-color	#a5a58d
 set $text-color #212121
 set $inactive-text-color	#212121
-set $myborder #ca6702
+set $myborder #ca670200
 
 # window colors
 #			border			background		text		indicator
@@ -219,7 +222,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec terminal
-exec_always feh --bg-scale ~/Pictures/new-wall.jpg
+exec_always feh --bg-scale ~/Pictures/new-wall1.jpg
 
 # This config is for compton, so as to achive a fade effect
 # exec_always compton
@@ -232,7 +235,7 @@ exec xinput set-prop 12 338 1
 for_window [class="firefox"] move to workspace $ws02
 
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 0
+# for_window [class=".*"] border pixel 0
 
 #Screenshot and flameshot bindings
 #bindsym $mod+Shift+/ exec flameshot gui

@@ -1,0 +1,143 @@
+configuration {
+    font:                           "Iosevka Nerd Font 14";
+    disable-history:                true;
+    sidebar-mode: 		    false;
+}
+
+
+* {
+  accent:                           #81a1c1;
+  accent2:                          #81a1c1;
+  background:                       #2E3440;
+  background-light:                 #3b4252;
+  foreground:                       #81a1c1; 
+  foreground-alt:                   #2e3440;
+  on:                               #a3be8c;
+  off:                              #81a1c1;
+
+  background-color:                 @background;
+  text-color:                       @foreground;
+}
+
+window {
+  transparency:                     "real";
+  border:			    10px;
+  border-color:		            @accent;
+  border-radius:                    15px;
+  location:                         center;
+  width:                            800px;
+  x-offset:                         0px;
+  y-offset:                         0px;
+}
+
+prompt {
+  enabled:                          true;
+  padding:                          10px;
+  background-color: 	            @background-light;
+  text-color: 		            @foreground;
+  border:                           2px 2px 3px 2px;
+  border-radius:                    0px 8px 8px 0px;
+  border-color:                     @accent;
+}
+
+textbox-prompt-colon {
+  expand:                           false;
+  str:                              " System ";
+  background-color:                 @accent;
+  text-color:                       @foreground-alt;
+  padding:                          12px 10px 0px 10px;
+  font:                             "Iosevka Nerd Font Bold 14";
+}
+
+inputbar {
+  children:                         [ textbox-prompt-colon, prompt ];
+  spacing:                          0px;
+  background-color:                 @background;
+  text-color:                       @foreground;
+  expand:                           false;
+  border:                           0px;
+  border-radius:                    8px;
+  border-color:                     @accent;
+  margin:                           0px 0px 0px 0px;
+  padding:                          0px;
+  position:                         center;
+}
+
+listview {
+  columns:                          5;
+  lines:                            1;
+  spacing:                          15px;
+  cycle:                            true;
+  dynamic:                          true;
+  layout:                           vertical;
+}
+
+mainbox {
+  background-color:                 @background;
+  children:                         [ inputbar, listview ];
+  spacing:                          15px;
+  margin:                           40px;
+}
+
+element {
+  background-color:                 @background-light;
+  text-color:                       @foreground;
+  orientation:                      vertical;
+  border-radius:                    0px;
+}
+
+element-text {
+  font:                             "Iosevka Nerd Font 30";
+  background-color:                 @background-light;
+  expand:                           true;
+  horizontal-align:                 0.5;
+  vertical-align:                   0;
+  margin:                           40px 0px 40px 0px;
+}
+
+element normal {
+  border-radius:                    8px;
+}
+
+element alternate {
+  border-radius:                    8px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+  background-color:                 @off;
+  text-color:                       @foreground;
+  border-radius:                    0px;
+}
+
+element normal.active,
+element alternate.active {
+  background-color:                 @on;
+  text-color:                       @foreground;
+}
+
+element selected {
+  background-color:                 @accent;
+  text-color:                       @foreground;
+  border:                           0px;
+  border-radius:                    8px;
+  border-color:                     @border;
+}
+
+element selected.urgent {
+  background-color:                 @on;
+  text-color:                       @foreground;
+}
+
+element selected.active {
+  background-color:                 @off;
+  color:                            @background;
+}
+element-text selected {
+  background-color:                 @accent;
+  color:                            @background;
+}
+
+/* 
+ * vim:ft=css 
+ * */

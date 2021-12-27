@@ -1,36 +1,56 @@
-#UI
 window:
   padding:
-    x: 15
-    y: 15
+    x: 5
+    y: 5
 
-# Colors
 colors:
   primary:
-    foreground: "0xC8C8C8"
-    background: "0x131A1C"
-    # 010101
+    background: '#1f222d'
+    foreground: '#d8dee9'
+    dim_foreground: '#a5abb6'
+  cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  vi_mode_cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: CellBackground
+      background: '#88c0d0'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
   normal:
-    black: "0x262626"
-    red: "0xac8a8c"
-    green: "0x8aac8b"
-    yellow: "0xaca98a"
-    blue: "0x8f8aac"
-    magenta: "0xac8aac"
-    cyan: "0x8aabac"
-    white: "0xe7e7e7"
-    orange: "0xc6a679" #Here for reference
-
+    black: '#3b4252'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#88c0d0'
+    white: '#e5e9f0'
   bright:
-    black: "0x4c4c4c"
-    red: "0xc49ea0"
-    green: "0x9ec49f"
-    yellow: "0xc4c19e"
-    blue: "0xa39ec4"
-    magenta: "0xc49ec4"
-    cyan: "0x9ec3c4"
-    white: "0xf5f5f5"
-    orange: "0xceb188" #Here for reference
+    black: '#4c566a'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#eceff4'
+  dim:
+    black: '#373e4d'
+    red: '#94545d'
+    green: '#809575'
+    yellow: '#b29e75'
+    blue: '#68809a'
+    magenta: '#8c738c'
+    cyan: '#6d96a5'
+    white: '#aeb3bb'
 
 font:
   normal:
@@ -42,6 +62,4 @@ font:
   italic:
     family: CaskaydiaCove Nerd Font
 
-  size: 10
-
-background_opacity: 1
+  size: 9

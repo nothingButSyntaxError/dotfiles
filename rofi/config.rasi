@@ -1,80 +1,235 @@
-/* I heisted the format from Joni */
-/* https://github.com/joni22u/dotfiles/blob/main/.config/rofi/config.rasi */
-
 configuration {
-	modi: "drun,run";
-	font: "curie 10";
-	terminal: "alacritty";
-	lines: 10;
-	sidebar-mode: true;
-	display-drun: "Apps";
-	display-run: "Run";
-	display-emoji: "Emoji";
+        modi:				"drun,window,windowcd,keys,filebrowser,run,combi";
+        font:				"Iosevka Nerd Font 14";
+        drun-display-format:            "{name}";
+        sidebar-mode: 			true;
+        matching:                       "fuzzy";
+        scroll-method:                  0;
+        disable-history:                false;
+        display-drun:                   "   Menu ";
+        display-run:                    "   Run ";
+        display-window:                 "   Window ";
+        display-windowcd:               "   Window+ ";
+        display-keys:                   "   Keys ";
+        display-filebrowser:            "   Browse ";
+        display-combi:                  "   Binds ";
+        window-thumbnail:               true;
+	sort:                           true;
+	sorting-method:                 "normal";
+
+        kb-primary-paste:               "Control+V,Shift+Insert";
+	kb-secondary-paste:             "Control+v,Insert";
+	kb-clear-line:                  "Control+w";
+        kb-move-front:                  "Control+a";
+	kb-move-end:                    "Control+e";
+	kb-move-word-back:              "Alt+b,Control+Left";
+	kb-move-word-forward:           "Alt+f,Control+Right";
+	kb-move-char-back:              "Left,Control+b";
+        kb-move-char-forward:           "Right,Control+f";
+	kb-remove-word-back:            "Control+Alt+h,Control+BackSpace";
+	kb-remove-word-forward:         "Control+Alt+d";
+	kb-remove-char-forward:         "Delete,Control+d";
+	kb-remove-char-back:            "BackSpace,Shift+BackSpace,Control+h";
+	kb-remove-to-eol:               "Control+k";
+	kb-remove-to-sol:               "Control+u";
+	kb-accept-entry:                "Control+j,Control+m,Return,KP_Enter";
+	kb-accept-custom:               "Control+Return";
+	kb-accept-custom-alt:           "Control+Shift+Return";
+	kb-accept-alt:                  "Shift+Return";
+	kb-delete-entry:                "Shift+Delete";
+	kb-mode-next:                   "Shift+Right,Control+Tab";
+	kb-mode-previous:               "Shift+Left,Control+ISO_Left_Tab";
+	kb-mode-complete:               "Control+l";
+	kb-row-left:                    "Control+Page_Up";
+	kb-row-right:                   "Control+Page_Down";
+	kb-row-up:                      "Up,Control+p,ISO_Left_Tab";
+	kb-row-down:                    "Down,Control+n";
+	kb-row-tab:                     "Tab";
+	kb-page-prev:                   "Page_Up";
+	kb-page-next:                   "Page_Down";
+	kb-row-first:                   "Home,KP_Home";
+	kb-row-last:                    "End,KP_End";
+	kb-row-select:                  "Control+space";
+	kb-screenshot:                  "Alt+Shift+S";
+	kb-ellipsize:                   "Alt+period";
+	kb-toggle-case-sensitivity:     "grave,dead_grave";
+	kb-toggle-sort:                 "Alt+grave";
+	kb-cancel:                      "Escape,Control+g,Control+bracketleft";
+	kb-custom-1:                    "Alt+1";
+	kb-custom-2:                    "Alt+2";
+	kb-custom-3:                    "Alt+3";
+	kb-custom-4:                    "Alt+4";
+	kb-custom-5:                    "Alt+5";
+	kb-custom-6:                    "Alt+6";
+	kb-custom-7:                    "Alt+7";
+	kb-custom-8:                    "Alt+8";
+	kb-custom-9:                    "Alt+9";
+	kb-custom-10:                   "Alt+0";
+	kb-custom-11:                   "Alt+exclam";
+	kb-custom-12:                   "Alt+at";
+	kb-custom-13:                   "Alt+numbersign";
+	kb-custom-14:                   "Alt+dollar";
+	kb-custom-15:                   "Alt+percent";
+	kb-custom-16:                   "Alt+dead_circumflex";
+	kb-custom-17:                   "Alt+ampersand";
+	kb-custom-18:                   "Alt+asterisk";
+	kb-custom-19:                   "Alt+parenleft";
+	kb-select-1:                    "Super+1";
+	kb-select-2:                    "Super+2";
+	kb-select-3:                    "Super+3";
+	kb-select-4:                    "Super+4";
+	kb-select-5:                    "Super+5";
+	kb-select-6:                    "Super+6";
+        kb-select-7:                    "Super+7";
+	kb-select-8:                    "Super+8";
+	kb-select-9:                    "Super+9";
+	kb-select-10:                   "Super+0";
+	ml-row-left:                    "ScrollLeft";
+	ml-row-right:                   "ScrollRight";
+	ml-row-up:                      "ScrollUp";
+	ml-row-down:                    "ScrollDown";
+	me-select-entry:                "MousePrimary";
+	me-accept-entry:                "MouseDPrimary";
+	me-accept-custom:               "Control+MouseDPrimary";
+
+        timeout {
+                action:                 "kb-cancel";
+                delay:                  0;
+        }
+        
+        filebrowser {
+                directories-first:      true;
+                sorting-method:         "name";
+        }
 }
 
 @theme "/dev/null"
 
 * {
-	bg: #ede0d4;
-	fg: #6c605a;
-	accent: #e76f51;
-	button: #e9c46a;
-  
-	background-color: @bg;
-  	text-color: @fg;
+        bg:				#1f222d;
+        fg:				#81a1c1;
+        button:				#81a1c1;
+        background-color:		@bg;
+        text-color:			@fg;
 }
 
-element-text {
-	background-color: inherit;
-	text-color: inherit;
+element-text, element-icon, mode-switcher {
+        background-color:               inherit;
+        text-color:                     inherit;
 }
 
 window {
-	padding: 30px;
-	border-radius: 7px;
-}
-
-prompt, entry {
-	text-color: @fg;
-	padding: 10px;
-	border-radius: 7px;
-}
-
-listview {
-	columns: 2;
-	lines: 10;
-}
-
-entry {
-	margin: 0 0 10px 10px;
+        transparency:                   "real";
+        width:			    	60%;
+        border:			        10px;
+        border-radius:                  15px;
+        border-color:                   #1f222d;
+        height:                         70%;
 }
 
 prompt {
-	background-color: @button;
-	text-color: @fg;
-	margin: 0 0 10px 0;
-	padding: 10px 30px 10px 30px;
+        enabled:                        true;
+        background-color:               @bg;
+        padding:                        20px 15px 5px 15px;
+        text-color:                     @fg;
+        border-radius:			50%;
+        expand:                         true;
+        font:				"Iosevka Nerd Font Bold 14";
 }
+
+textbox-prompt-colon {
+        expand:                         false;
+	padding:                        1% 2% 0% 2%;
+	margin:                         0% 1% 0% 1%;
+        font:				"Iosevka Nerd Font 30";
+	border-radius:                  50%;
+        str:                            "";
+}
+
+entry {
+	placeholder:			"Search";
+	placeholder-color:              #81a1c1;
+	text-color:			#81a1c1;
+	expand:                         true;
+	padding:                        2.0%;
+	border-radius:			50%;
+        font:				"Iosevka Nerd Font Bold 14";
+}
+
+inputbar {
+	children: 			[ prompt, textbox-prompt-colon, entry ];
+	background-image:               url("img/bg.png");
+	expand:                         false;
+	border-radius:                  10px 10px 0px 0px;
+        font:				"Iosevka Nerd Font 14";
+        margin:                         0px 0px 20px 0px;
+        padding:                        200px 20px 20px 20px;
+}
+
+listview {
+	columns:                        3;
+	lines:	                        2;
+	cycle:                          false;
+	dynamic:                        true;
+	layout:                         vertical;
+	padding:			0px 15px 0px 15px;
+        scrollbar:                      false;
+}
+
+mainbox { children: [ inputbar, listview, mode-switcher ]; }
 
 element {
-	border-radius: 7px;
-	padding: 10px 30px;
+	orientation:                    vertical;
+	padding:                        5% 2% 2% 0%;
+        font:				"Iosevka Nerd Font 14";
+        margin:                         5px 5px 5px 5px;
+	border-radius:			10px;
+        background-color:               #3b4252;
 }
 
-element.selected {
-	background-color: @accent;
-	text-color: @bg;
+element-text {
+	expand:                         true;
+	vertical-align:                 0.5;
+	margin:                         0% 1% 0% 1%;
+        font:				"Iosevka Nerd Font 14";
+	background-color: 		inherit;
+	text-color:       		inherit;
+}
+
+element selected {
+	background-color:               @button;
+        font:				"Iosevka Nerd Font Bold 14";
+	text-color:                     #2e3440;
+	border-radius:                  10px;
+}
+
+mode-switcher {
+        spacing:                        0px;
+	border-radius:                  10px;
+        margin:                         0px 20px 20px 20px;
 }
 
 button {
-	border-radius: 7px;
-	padding: 10px;
-	margin: 10px 50px 0 50px;
-	horizontal-align: 0.5;
+        padding:                        15px;
+        margin:                         0px;
+        font:				"Iosevka Nerd Font Bold 14";
+        background-color:               #161718;
+        text-color:                     #3b4252;
+        vertical-align:                 0.5; 
+        horizontal-align:               0.5;
 }
 
 button selected {
-	background-color: @button;
-	text-color: @fg;
-	padding: 10px;
+        padding:                        15px;
+        margin:                         0px;
+        background-color:               #3b4252;
+        text-color:                     #81a1c1;
+        /** 
+          border:			0px 0px 5px 0px;
+          border-color:                #88C0D0;
+        */
 }
+
+/* 
+  vim:ft=css:nowrap 
+*/

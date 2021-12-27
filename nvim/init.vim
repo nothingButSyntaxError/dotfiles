@@ -12,7 +12,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 "}}}
 
 " ================= looks and GUI stuff ================== "{{{
-
+Plug 'arcticicestudio/nord-vim'
 Plug 'ryanoasis/vim-devicons'                           " pretty icons everywhere
 Plug 'luochen1990/rainbow'                              " rainbow parenthesis
 Plug 'hzchirs/vim-material'                             " material color themes
@@ -95,7 +95,7 @@ set signcolumn=yes
 
 " Themeing
 let g:material_style = 'oceanic'
-colorscheme uwu
+colorscheme nord
 hi Pmenu guibg='#00010a' guifg=white                    " popup menu colors
 hi Comment gui=italic cterm=italic                      " italic comments
 hi Search guibg=#b16286 guifg=#ebdbb2 gui=NONE          " search string highlight color
