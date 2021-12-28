@@ -222,7 +222,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec terminal
-exec_always feh --bg-scale ~/Pictures/new-wall1.jpg
+exec_always feh --bg-scale ~/Pictures/new-wall.jpg
 
 # This config is for compton, so as to achive a fade effect
 # exec_always compton
