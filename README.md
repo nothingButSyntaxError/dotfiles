@@ -23,3 +23,6 @@
 
 # Setup
 #### To set this up you have to clone this into your .config directory or also known as `XDG_CONFIG_DIR` on your linux/unix system and run rsync on it.
+
+# Inspiration
+#### Inspiration for polybar design: https://github.com/waishnav/dotfiles
